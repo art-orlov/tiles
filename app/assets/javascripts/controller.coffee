@@ -8,6 +8,8 @@ $( ->
 
     gen.magic wall
 
+    console.log wall
+
     rnd.render()
 
 
