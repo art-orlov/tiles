@@ -11,7 +11,7 @@ class Generator
       return if (y >= 0 && x >= 0) then wall.tiles[y][x] else null
 
     clash_detected = (tile1, tile2, rotation) ->
-      return tile1? && tile2 && tile1.vh == tile2.vh && tile1.vh == (rotation % 2)
+      return tile1? && tile2? && tile1.vh == tile2.vh && tile1.vh == (rotation % 2)
 
     clash_detected_pos = (y, x, rotation) ->
       return clash_detected(get_tile(y-2, x), get_tile(y-1, x), rotation) || clash_detected(get_tile(y, x-2), get_tile(y, x-1), rotation)
