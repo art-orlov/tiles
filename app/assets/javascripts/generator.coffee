@@ -51,7 +51,7 @@ class Generator
         wall.tiles[y][x] = null
         return undefined
 
-    find_tile(0, 0)
+    console.log('Generating...') until find_tile(0, 0)
 
 
 @Generator = Generator
